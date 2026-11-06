@@ -2,539 +2,1072 @@
 <html lang="ar" dir="rtl">
 
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="color-scheme" content="light">
-<meta name="theme-color" content="#3350d4">
-<title>امتحان الوحدة السادسة – النظام الثنائي والسادس عشر</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-<style>
-:root{--blue:#3350d4;--blue2:#243cb0;--navy:#1e2f8f;--soft:#eef2ff;--line:#d5dcf5;--yel:#fbbf24;--yelbg:#fffbea;--yelbd:#f5a623;--grn:#2e9e44;--grnbg:#e9f7ec;--pink:#c2185b;--pinkbg:#fdecf2;--ink:#1f2a5a;--mute:#6b7596;color-scheme:light}
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-html{scroll-padding-top:130px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
-body{margin:0;background:#fff;color:var(--ink);font-family:"Cairo",Tahoma,Arial,sans-serif;line-height:1.8;padding-top:env(safe-area-inset-top,0);padding-bottom:env(safe-area-inset-bottom,0);-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
-input{-webkit-user-select:text;user-select:text}
-.b{direction:ltr;unicode-bidi:isolate;font-family:ui-monospace,Menlo,Consolas,monospace;font-weight:600}
-.wrap{max-width:760px;margin:0 auto;padding:12px max(16px,env(safe-area-inset-right,0px)) 20px max(16px,env(safe-area-inset-left,0px))}
-.hide{display:none!important}
-.top{display:flex;justify-content:space-between;gap:8px;font-size:13px;font-weight:700;color:var(--navy);border-bottom:2px solid var(--blue);padding-bottom:4px;margin-bottom:12px}
-.top .l{direction:ltr;letter-spacing:.04em}
-.banner{background:linear-gradient(120deg,var(--blue),var(--blue2));color:#fff;border-radius:22px;padding:20px 22px;display:flex;align-items:center;gap:18px;position:relative;overflow:hidden}
-.banner:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:rgba(255,255,255,.1);left:-40px;top:-70px}
-.banner .circ{flex:none;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.18);display:grid;place-items:center;font:700 22px/1.1 ui-monospace,Menlo,monospace;text-align:center;position:relative}
-.banner .tx{flex:1;min-width:0;text-align:right}
-.chip{display:inline-block;background:var(--yel);color:#4a3200;font-weight:800;padding:1px 16px;border-radius:20px;font-size:15px}
-.banner h1{margin:4px 0 0;font-size:28px;line-height:1.4;font-weight:900}
-.banner p{margin:0;opacity:.9;font-size:14px}
-.bar-sec{display:flex;align-items:center;gap:12px;background:linear-gradient(120deg,var(--blue),var(--blue2));color:#fff;border-radius:18px;padding:8px 16px;margin:22px 0 10px;font-weight:800;font-size:20px}
-.bar-sec .dot,.sec .dot{flex:none;order:3;width:34px;height:34px;border-radius:50%;background:var(--yel);color:#4a3200;display:grid;place-items:center;font-size:17px;font-weight:900}
-.bar-sec b{direction:ltr;unicode-bidi:isolate;font-size:19px}
-.bar-sec em{font-style:normal;font-size:14px;font-weight:600;opacity:.9;margin-inline-start:auto}
-.sub{background:var(--soft);border-inline-start:4px solid var(--blue);color:var(--navy);font-weight:800;padding:6px 14px;font-size:17px;margin:14px 0 8px}
-label.f{display:block;font-weight:800;color:var(--navy);margin:12px 0 2px}
-input[type=text],input[type=tel]{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:16px;background:var(--soft);color:var(--ink)}
-input:focus-visible,button:focus-visible,.opt:focus-within{outline:3px solid var(--blue);outline-offset:2px}
-.box{border:2px solid var(--yelbd);background:var(--yelbg);border-radius:16px;padding:12px 16px 14px;margin-top:12px}
-.pill{display:inline-block;background:var(--yel);color:#4a3200;font-weight:800;border-radius:20px;padding:0 14px;font-size:14px;margin-bottom:4px}
-.note{background:var(--grnbg);border-inline-start:4px solid var(--grn);padding:8px 14px;margin:8px 0;border-radius:4px}
-.note:before{content:"★ ";color:var(--grn)}
-.rule{border:2px solid var(--pink);background:var(--pinkbg);border-radius:16px;padding:10px 16px;margin-top:12px}
-.rule .pill{background:var(--pink);color:#fff}
-ul.rules{padding-inline-start:20px;margin:6px 0 0}
-.btn{display:inline-block;border:0;background:linear-gradient(120deg,var(--blue),var(--blue2));color:#fff;font:inherit;font-weight:800;font-size:17px;padding:11px 30px;border-radius:14px;cursor:pointer;margin-top:16px}
-.btn.alt{background:#fff;color:var(--blue);border:2px solid var(--blue)}
-.btn,.opt,.mapbtn,.bits i{touch-action:manipulation}
-.err{color:var(--pink);font-weight:700;min-height:1.5em;margin:8px 0 0}
-.bar{position:sticky;top:0;z-index:5;background:#fff;padding:calc(8px + env(safe-area-inset-top,0)) 0 8px;border-bottom:2px solid var(--blue)}
-.bar .row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-weight:800;color:var(--navy)}
-.timer{direction:ltr;white-space:nowrap;font-variant-numeric:tabular-nums;background:var(--yel);color:#4a3200;padding:0 14px;border-radius:20px}
-.timer.low{background:var(--pink);color:#fff}
-.mapbtn{display:none}
-.prog{height:4px;background:var(--soft);border-radius:4px;margin-top:6px;overflow:hidden}
-.prog i{display:block;height:100%;width:0;background:var(--blue);transition:width .25s}
-.bits{display:grid;grid-template-columns:repeat(20,1fr);gap:3px;margin-top:6px;direction:ltr}
-.bits i{height:17px;border-radius:4px;background:var(--soft);border:1px solid var(--line);font:600 9px/15px ui-monospace,Menlo,monospace;text-align:center;color:var(--mute);font-style:normal;cursor:pointer}
-.bits i.on{background:var(--blue);border-color:var(--blue);color:#fff}
-.q{border:2px solid var(--yelbd);background:var(--yelbg);border-radius:16px;padding:10px 16px 14px;margin-top:12px}
-.q h3{margin:2px 0 8px;font-size:17px;line-height:1.9;font-weight:700;overflow-wrap:anywhere}
-.opt{display:flex;gap:12px;align-items:center;padding:7px 14px;margin-top:6px;border:1.5px solid var(--line);border-inline-start:4px solid var(--blue);border-radius:10px;cursor:pointer;background:#fff}
-.opt span{min-width:0;overflow-wrap:anywhere}
-.opt:has(input:checked){background:var(--soft);border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
-.opt input{width:19px;height:19px;accent-color:var(--blue);flex:none}
-.done{text-align:center;padding:10px 0}
-.done .big{font-size:64px;font-weight:900;color:var(--blue);line-height:1.3}
-.foot{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:13px;color:var(--mute);margin-top:30px;border-top:1px solid var(--line);padding-top:8px}
-.foot .pg{flex:none;width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:grid;place-items:center;font-weight:800}
-.toast{position:fixed;inset-inline:16px;bottom:calc(16px + env(safe-area-inset-bottom,0));background:var(--pink);color:#fff;padding:12px 16px;border-radius:12px;font-weight:700;z-index:9;max-width:600px;margin:auto}
-.hp{position:absolute;top:0;inset-inline-start:0;width:1px;height:1px;opacity:0;pointer-events:none}
-
-/* ===== الهاتف ===== */
-@media(max-width:600px){
-html{scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
-.wrap{padding:10px max(14px,env(safe-area-inset-right,0px)) 24px max(14px,env(safe-area-inset-left,0px))}
-.banner{padding:16px 14px;gap:12px;border-radius:18px}
-.banner h1{font-size:20px}
-.banner p{font-size:13px}
-.banner .circ{width:52px;height:52px;font-size:15px}
-.bar-sec{flex-wrap:wrap;gap:2px 10px;padding:8px 12px;margin:18px 0 8px;font-size:16px}
-.bar-sec b{font-size:16px}
-.bar-sec em{font-size:13px}
-.bar-sec .dot{width:30px;height:30px;font-size:15px}
-.box,.rule{padding:10px 12px 12px}
-.btn{display:block;width:100%;min-height:50px;padding:11px 16px}
-.bar{padding:calc(6px + env(safe-area-inset-top,0)) 0 6px}
-.bar .row{gap:8px;font-size:14px}
-.bar .row #cnt{flex:1;min-width:0;line-height:1.5}
-.timer{padding:0 10px;font-size:15px}
-.mapbtn{display:inline-block;flex:none;border:1.5px solid var(--blue);background:#fff;color:var(--blue);font:inherit;font-size:13px;font-weight:800;border-radius:16px;padding:0 12px;min-height:30px;cursor:pointer}
-.bar.open .mapbtn{background:var(--blue);color:#fff}
-.bits{display:none;grid-template-columns:repeat(10,1fr);gap:5px;max-height:40vh;max-height:40dvh;overflow-y:auto;overscroll-behavior:contain;padding:2px 0}
-.bar.open .bits{display:grid}
-.bits i{height:34px;line-height:32px;font-size:13px;border-radius:8px}
-.q{padding:8px 12px 12px;border-radius:14px}
-.q h3{font-size:16px}
-.opt{padding:10px 12px;min-height:48px;gap:10px}
-.opt input{width:22px;height:22px}
-.done .big{font-size:52px}
-.foot{font-size:12px}
-}
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="light">
+    <meta name="theme-color" content="#3350d4">
+    <title>امتحان الوحدة السادسة – النظام الثنائي والسادس عشر</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --blue: #3350d4;
+            --blue2: #243cb0;
+            --navy: #1e2f8f;
+            --soft: #eef2ff;
+            --line: #d5dcf5;
+            --yel: #fbbf24;
+            --yelbg: #fffbea;
+            --yelbd: #f5a623;
+            --grn: #2e9e44;
+            --grnbg: #e9f7ec;
+            --pink: #c2185b;
+            --pinkbg: #fdecf2;
+            --ink: #1f2a5a;
+            --mute: #6b7596;
+            color-scheme: light
+        }
+        
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent
+        }
+        
+        html {
+            scroll-padding-top: 130px;
+            -webkit-text-size-adjust: 100%;
+            text-size-adjust: 100%
+        }
+        
+        body {
+            margin: 0;
+            background: #fff;
+            color: var(--ink);
+            font-family: "Cairo", Tahoma, Arial, sans-serif;
+            line-height: 1.8;
+            padding-top: env(safe-area-inset-top, 0);
+            padding-bottom: env(safe-area-inset-bottom, 0);
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none
+        }
+        
+        input {
+            -webkit-user-select: text;
+            user-select: text
+        }
+        
+        .b {
+            direction: ltr;
+            unicode-bidi: isolate;
+            font-family: ui-monospace, Menlo, Consolas, monospace;
+            font-weight: 600
+        }
+        
+        .wrap {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 12px max(16px, env(safe-area-inset-right, 0px)) 20px max(16px, env(safe-area-inset-left, 0px))
+        }
+        
+        .hide {
+            display: none!important
+        }
+        
+        .top {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--navy);
+            border-bottom: 2px solid var(--blue);
+            padding-bottom: 4px;
+            margin-bottom: 12px
+        }
+        
+        .top .l {
+            direction: ltr;
+            letter-spacing: .04em
+        }
+        
+        .banner {
+            background: linear-gradient(120deg, var(--blue), var(--blue2));
+            color: #fff;
+            border-radius: 22px;
+            padding: 20px 22px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            position: relative;
+            overflow: hidden
+        }
+        
+        .banner:before {
+            content: "";
+            position: absolute;
+            width: 190px;
+            height: 190px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .1);
+            left: -40px;
+            top: -70px
+        }
+        
+        .banner .circ {
+            flex: none;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, .18);
+            display: grid;
+            place-items: center;
+            font: 700 22px/1.1 ui-monospace, Menlo, monospace;
+            text-align: center;
+            position: relative
+        }
+        
+        .banner .tx {
+            flex: 1;
+            min-width: 0;
+            text-align: right
+        }
+        
+        .chip {
+            display: inline-block;
+            background: var(--yel);
+            color: #4a3200;
+            font-weight: 800;
+            padding: 1px 16px;
+            border-radius: 20px;
+            font-size: 15px
+        }
+        
+        .banner h1 {
+            margin: 4px 0 0;
+            font-size: 28px;
+            line-height: 1.4;
+            font-weight: 900
+        }
+        
+        .banner p {
+            margin: 0;
+            opacity: .9;
+            font-size: 14px
+        }
+        
+        .bar-sec {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(120deg, var(--blue), var(--blue2));
+            color: #fff;
+            border-radius: 18px;
+            padding: 8px 16px;
+            margin: 22px 0 10px;
+            font-weight: 800;
+            font-size: 20px
+        }
+        
+        .bar-sec .dot,
+        .sec .dot {
+            flex: none;
+            order: 3;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--yel);
+            color: #4a3200;
+            display: grid;
+            place-items: center;
+            font-size: 17px;
+            font-weight: 900
+        }
+        
+        .bar-sec b {
+            direction: ltr;
+            unicode-bidi: isolate;
+            font-size: 19px
+        }
+        
+        .bar-sec em {
+            font-style: normal;
+            font-size: 14px;
+            font-weight: 600;
+            opacity: .9;
+            margin-inline-start: auto
+        }
+        
+        .sub {
+            background: var(--soft);
+            border-inline-start: 4px solid var(--blue);
+            color: var(--navy);
+            font-weight: 800;
+            padding: 6px 14px;
+            font-size: 17px;
+            margin: 14px 0 8px
+        }
+        
+        label.f {
+            display: block;
+            font-weight: 800;
+            color: var(--navy);
+            margin: 12px 0 2px
+        }
+        
+        input[type=text],
+        input[type=tel] {
+            width: 100%;
+            padding: 11px 12px;
+            border: 1.5px solid var(--line);
+            border-radius: 12px;
+            font: inherit;
+            font-size: 16px;
+            background: var(--soft);
+            color: var(--ink)
+        }
+        
+        input:focus-visible,
+        button:focus-visible,
+        .opt:focus-within {
+            outline: 3px solid var(--blue);
+            outline-offset: 2px
+        }
+        
+        .box {
+            border: 2px solid var(--yelbd);
+            background: var(--yelbg);
+            border-radius: 16px;
+            padding: 12px 16px 14px;
+            margin-top: 12px
+        }
+        
+        .pill {
+            display: inline-block;
+            background: var(--yel);
+            color: #4a3200;
+            font-weight: 800;
+            border-radius: 20px;
+            padding: 0 14px;
+            font-size: 14px;
+            margin-bottom: 4px
+        }
+        
+        .note {
+            background: var(--grnbg);
+            border-inline-start: 4px solid var(--grn);
+            padding: 8px 14px;
+            margin: 8px 0;
+            border-radius: 4px
+        }
+        
+        .note:before {
+            content: "★ ";
+            color: var(--grn)
+        }
+        
+        .rule {
+            border: 2px solid var(--pink);
+            background: var(--pinkbg);
+            border-radius: 16px;
+            padding: 10px 16px;
+            margin-top: 12px
+        }
+        
+        .rule .pill {
+            background: var(--pink);
+            color: #fff
+        }
+        
+        ul.rules {
+            padding-inline-start: 20px;
+            margin: 6px 0 0
+        }
+        
+        .btn {
+            display: inline-block;
+            border: 0;
+            background: linear-gradient(120deg, var(--blue), var(--blue2));
+            color: #fff;
+            font: inherit;
+            font-weight: 800;
+            font-size: 17px;
+            padding: 11px 30px;
+            border-radius: 14px;
+            cursor: pointer;
+            margin-top: 16px
+        }
+        
+        .btn.alt {
+            background: #fff;
+            color: var(--blue);
+            border: 2px solid var(--blue)
+        }
+        
+        .btn,
+        .opt,
+        .mapbtn,
+        .bits i {
+            touch-action: manipulation
+        }
+        
+        .err {
+            color: var(--pink);
+            font-weight: 700;
+            min-height: 1.5em;
+            margin: 8px 0 0
+        }
+        
+        .bar {
+            position: sticky;
+            top: 0;
+            z-index: 5;
+            background: #fff;
+            padding: calc(8px + env(safe-area-inset-top, 0)) 0 8px;
+            border-bottom: 2px solid var(--blue)
+        }
+        
+        .bar .row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 10px;
+            font-weight: 800;
+            color: var(--navy)
+        }
+        
+        .timer {
+            direction: ltr;
+            white-space: nowrap;
+            font-variant-numeric: tabular-nums;
+            background: var(--yel);
+            color: #4a3200;
+            padding: 0 14px;
+            border-radius: 20px
+        }
+        
+        .timer.low {
+            background: var(--pink);
+            color: #fff
+        }
+        
+        .mapbtn {
+            display: none
+        }
+        
+        .prog {
+            height: 4px;
+            background: var(--soft);
+            border-radius: 4px;
+            margin-top: 6px;
+            overflow: hidden
+        }
+        
+        .prog i {
+            display: block;
+            height: 100%;
+            width: 0;
+            background: var(--blue);
+            transition: width .25s
+        }
+        
+        .bits {
+            display: grid;
+            grid-template-columns: repeat(20, 1fr);
+            gap: 3px;
+            margin-top: 6px;
+            direction: ltr
+        }
+        
+        .bits i {
+            height: 17px;
+            border-radius: 4px;
+            background: var(--soft);
+            border: 1px solid var(--line);
+            font: 600 9px/15px ui-monospace, Menlo, monospace;
+            text-align: center;
+            color: var(--mute);
+            font-style: normal;
+            cursor: pointer
+        }
+        
+        .bits i.on {
+            background: var(--blue);
+            border-color: var(--blue);
+            color: #fff
+        }
+        
+        .q {
+            border: 2px solid var(--yelbd);
+            background: var(--yelbg);
+            border-radius: 16px;
+            padding: 10px 16px 14px;
+            margin-top: 12px
+        }
+        
+        .q h3 {
+            margin: 2px 0 8px;
+            font-size: 17px;
+            line-height: 1.9;
+            font-weight: 700;
+            overflow-wrap: anywhere
+        }
+        
+        .opt {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 7px 14px;
+            margin-top: 6px;
+            border: 1.5px solid var(--line);
+            border-inline-start: 4px solid var(--blue);
+            border-radius: 10px;
+            cursor: pointer;
+            background: #fff
+        }
+        
+        .opt span {
+            min-width: 0;
+            overflow-wrap: anywhere
+        }
+        
+        .opt:has(input:checked) {
+            background: var(--soft);
+            border-color: var(--blue);
+            box-shadow: inset 0 0 0 1px var(--blue)
+        }
+        
+        .opt input {
+            width: 19px;
+            height: 19px;
+            accent-color: var(--blue);
+            flex: none
+        }
+        
+        .done {
+            text-align: center;
+            padding: 10px 0
+        }
+        
+        .done .big {
+            font-size: 64px;
+            font-weight: 900;
+            color: var(--blue);
+            line-height: 1.3
+        }
+        
+        .foot {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: var(--mute);
+            margin-top: 30px;
+            border-top: 1px solid var(--line);
+            padding-top: 8px
+        }
+        
+        .foot .pg {
+            flex: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: var(--blue);
+            color: #fff;
+            display: grid;
+            place-items: center;
+            font-weight: 800
+        }
+        
+        .toast {
+            position: fixed;
+            inset-inline: 16px;
+            bottom: calc(16px + env(safe-area-inset-bottom, 0));
+            background: var(--pink);
+            color: #fff;
+            padding: 12px 16px;
+            border-radius: 12px;
+            font-weight: 700;
+            z-index: 9;
+            max-width: 600px;
+            margin: auto
+        }
+        
+        .hp {
+            position: absolute;
+            top: 0;
+            inset-inline-start: 0;
+            width: 1px;
+            height: 1px;
+            opacity: 0;
+            pointer-events: none
+        }
+        /* ===== الهاتف ===== */
+        
+        @media(max-width:600px) {
+            html {
+                scroll-padding-top: calc(76px + env(safe-area-inset-top, 0px))
+            }
+            .wrap {
+                padding: 10px max(14px, env(safe-area-inset-right, 0px)) 24px max(14px, env(safe-area-inset-left, 0px))
+            }
+            .banner {
+                padding: 16px 14px;
+                gap: 12px;
+                border-radius: 18px
+            }
+            .banner h1 {
+                font-size: 20px
+            }
+            .banner p {
+                font-size: 13px
+            }
+            .banner .circ {
+                width: 52px;
+                height: 52px;
+                font-size: 15px
+            }
+            .bar-sec {
+                flex-wrap: wrap;
+                gap: 2px 10px;
+                padding: 8px 12px;
+                margin: 18px 0 8px;
+                font-size: 16px
+            }
+            .bar-sec b {
+                font-size: 16px
+            }
+            .bar-sec em {
+                font-size: 13px
+            }
+            .bar-sec .dot {
+                width: 30px;
+                height: 30px;
+                font-size: 15px
+            }
+            .box,
+            .rule {
+                padding: 10px 12px 12px
+            }
+            .btn {
+                display: block;
+                width: 100%;
+                min-height: 50px;
+                padding: 11px 16px
+            }
+            .bar {
+                padding: calc(6px + env(safe-area-inset-top, 0)) 0 6px
+            }
+            .bar .row {
+                gap: 8px;
+                font-size: 14px
+            }
+            .bar .row #cnt {
+                flex: 1;
+                min-width: 0;
+                line-height: 1.5
+            }
+            .timer {
+                padding: 0 10px;
+                font-size: 15px
+            }
+            .mapbtn {
+                display: inline-block;
+                flex: none;
+                border: 1.5px solid var(--blue);
+                background: #fff;
+                color: var(--blue);
+                font: inherit;
+                font-size: 13px;
+                font-weight: 800;
+                border-radius: 16px;
+                padding: 0 12px;
+                min-height: 30px;
+                cursor: pointer
+            }
+            .bar.open .mapbtn {
+                background: var(--blue);
+                color: #fff
+            }
+            .bits {
+                display: none;
+                grid-template-columns: repeat(10, 1fr);
+                gap: 5px;
+                max-height: 40vh;
+                max-height: 40dvh;
+                overflow-y: auto;
+                overscroll-behavior: contain;
+                padding: 2px 0
+            }
+            .bar.open .bits {
+                display: grid
+            }
+            .bits i {
+                height: 34px;
+                line-height: 32px;
+                font-size: 13px;
+                border-radius: 8px
+            }
+            .q {
+                padding: 8px 12px 12px;
+                border-radius: 14px
+            }
+            .q h3 {
+                font-size: 16px
+            }
+            .opt {
+                padding: 10px 12px;
+                min-height: 48px;
+                gap: 10px
+            }
+            .opt input {
+                width: 22px;
+                height: 22px
+            }
+            .done .big {
+                font-size: 52px
+            }
+            .foot {
+                font-size: 12px
+            }
+        }
+    </style>
 </head>
 
 <body>
-<div class="wrap">
-  <div class="top"><span>الوحدة السادسة · الصف الأول الثانوي</span><span class="l">ARTI CODE</span></div>
-  <div class="banner">
-    <div class="tx"><span class="chip">امتحان الوحدة</span>
-      <h1>النظام الثنائي وكمية البيانات والنظام السادس عشر</h1>
-      <p>الوحدة السادسة · البرمجة والذكاء الاصطناعي</p>
+    <div class="wrap">
+        <div class="top"><span>الوحدة السادسة · الصف الأول الثانوي</span><span class="l">ARTI CODE</span></div>
+        <div class="banner">
+            <div class="tx"><span class="chip">امتحان الوحدة</span>
+                <h1>النظام الثنائي وكمية البيانات والنظام السادس عشر</h1>
+                <p>الوحدة السادسة · البرمجة والذكاء الاصطناعي</p>
+            </div>
+            <div class="circ">01<br>10</div>
+        </div>
+
+        <section id="s-start">
+            <div class="bar-sec"><b>Student Info</b><em>بيانات الطالب</em><span class="dot">١</span></div>
+            <label class="f" for="name">الاسم الرباعي</label>
+            <input id="name" type="text" autocomplete="off" maxlength="80">
+            <label class="f" for="grp">توقعك كام من 60</label>
+            <input id="grp" type="text" autocomplete="off" maxlength="40">
+            <label class="f" for="ph">رقم الهاتف</label>
+            <input id="ph" type="tel" autocomplete="off" maxlength="15" inputmode="numeric">
+            <div class="box"><span class="pill">تعليمات ✎</span>
+                <ul class="rules">
+                    <li><b id="nq"></b> سؤالًا اختياريًا، المدة <b id="mins"></b> دقيقة، ودرجة كل سؤال واحدة.</li>
+                    <li>تحديث الصفحة لا يعيد الوقت من جديد، والوقت يستمر في العدّ.</li>
+                    <li>الخروج من الصفحة أو تبديل التطبيق يُسجَّل ويصل إلى المعلم.</li>
+                    <li>يُسلَّم الامتحان تلقائيًا عند انتهاء الوقت.</li>
+                </ul>
+            </div>
+            <div class="rule"><span class="pill">قاعدة</span>
+                <div>يُسمح بدخول الامتحان <b>مرة واحدة فقط</b> من هذا الجهاز، وبعد الضغط على «ابدأ الامتحان» لا يمكن إعادته.</div>
+            </div>
+            <p class="err" id="e-start"></p>
+            <button class="btn" id="go">ابدأ الامتحان</button>
+        </section>
+
+        <section id="s-exam" class="hide">
+            <div class="bar" id="bar">
+                <div class="row"><span id="cnt"></span><span class="timer" id="tm">00:00</span><button type="button" class="mapbtn" id="mapbtn" aria-expanded="false">الأسئلة ▾</button></div>
+                <div class="prog"><i id="pf"></i></div>
+                <div class="bits" id="bits" aria-hidden="true"></div>
+            </div>
+            <div id="qs"></div>
+            <p class="err" id="e-sub"></p>
+            <button class="btn" id="fin">تسليم الامتحان</button>
+        </section>
+
+        <section id="s-done" class="done hide">
+            <div class="bar-sec"><b>Result</b><em>النتيجة</em><span class="dot">★</span></div>
+            <div class="big" id="d-big"></div>
+            <div class="note" id="d-msg"></div>
+            <p class="err" id="e-done"></p>
+            <button class="btn alt hide" id="retry">إعادة محاولة الإرسال</button>
+        </section>
+
+        <section id="s-lock" class="hide">
+            <div class="rule" style="margin-top:20px"><span class="pill">قاعدة</span>
+                <div><b>تم تسليم هذا الامتحان من هذا الجهاز.</b> لا يمكن دخوله مرة أخرى، وإذا حدثت مشكلة تواصل مع المعلم.</div>
+            </div>
+        </section>
+
+        <div class="foot"><span>م. أيمن نعيم</span><span class="pg">٦</span><span>البرمجة والذكاء الاصطناعي</span></div>
     </div>
-    <div class="circ">01<br>10</div>
-  </div>
+    <input class="hp" tabindex="-1" autocomplete="off" id="botcheck" aria-hidden="true">
 
-  <section id="s-start">
-    <div class="bar-sec"><b>Student Info</b><em>بيانات الطالب</em><span class="dot">١</span></div>
-    <label class="f" for="name">الاسم الرباعي</label>
-    <input id="name" type="text" autocomplete="off" maxlength="80">
-    <label class="f" for="grp">توقعك كام من 60</label>
-    <input id="grp" type="text" autocomplete="off" maxlength="40">
-    <label class="f" for="ph">رقم الهاتف</label>
-    <input id="ph" type="tel" autocomplete="off" maxlength="15" inputmode="numeric">
-    <div class="box"><span class="pill">تعليمات ✎</span>
-      <ul class="rules">
-        <li><b id="nq"></b> سؤالًا اختياريًا، المدة <b id="mins"></b> دقيقة، ودرجة كل سؤال واحدة.</li>
-        <li>تحديث الصفحة لا يعيد الوقت من جديد، والوقت يستمر في العدّ.</li>
-        <li>الخروج من الصفحة أو تبديل التطبيق يُسجَّل ويصل إلى المعلم.</li>
-        <li>يُسلَّم الامتحان تلقائيًا عند انتهاء الوقت.</li>
-      </ul>
-    </div>
-    <div class="rule"><span class="pill">قاعدة</span>
-      <div>يُسمح بدخول الامتحان <b>مرة واحدة فقط</b> من هذا الجهاز، وبعد الضغط على «ابدأ الامتحان» لا يمكن إعادته.</div>
-    </div>
-    <p class="err" id="e-start"></p>
-    <button class="btn" id="go">ابدأ الامتحان</button>
-  </section>
+    <script>
+        /* ===== الإعدادات – غيّرها قبل الرفع ===== */
+        const ACCESS_KEY = "e09cf4ec-f7df-4666-9b95-3dac4408aeb8";
+        const EXAM_ID = "unit6-v1"; // غيّر الرقم لو عايز امتحان جديد يتفتح على نفس الجهاز
+        const MINUTES = 90;
+        const SUBJECT = "نتيجة امتحان الوحدة السادسة – الصف الأول الثانوي";
+        /* ======================================== */
 
-  <section id="s-exam" class="hide">
-    <div class="bar" id="bar">
-      <div class="row"><span id="cnt"></span><span class="timer" id="tm">00:00</span><button type="button" class="mapbtn" id="mapbtn" aria-expanded="false">الأسئلة ▾</button></div>
-      <div class="prog"><i id="pf"></i></div>
-      <div class="bits" id="bits" aria-hidden="true"></div>
-    </div>
-    <div id="qs"></div>
-    <p class="err" id="e-sub"></p>
-    <button class="btn" id="fin">تسليم الامتحان</button>
-  </section>
-
-  <section id="s-done" class="done hide">
-    <div class="bar-sec"><b>Result</b><em>النتيجة</em><span class="dot">★</span></div>
-    <div class="big" id="d-big"></div>
-    <div class="note" id="d-msg"></div>
-    <p class="err" id="e-done"></p>
-    <button class="btn alt hide" id="retry">إعادة محاولة الإرسال</button>
-  </section>
-
-  <section id="s-lock" class="hide">
-    <div class="rule" style="margin-top:20px"><span class="pill">قاعدة</span>
-      <div><b>تم تسليم هذا الامتحان من هذا الجهاز.</b> لا يمكن دخوله مرة أخرى، وإذا حدثت مشكلة تواصل مع المعلم.</div>
-    </div>
-  </section>
-
-  <div class="foot"><span>م. أيمن نعيم</span><span class="pg">٦</span><span>البرمجة والذكاء الاصطناعي</span></div>
-</div>
-<input class="hp" tabindex="-1" autocomplete="off" id="botcheck" aria-hidden="true">
-
-<script>
-/* ===== الإعدادات – غيّرها قبل الرفع ===== */
-const ACCESS_KEY = "e09cf4ec-f7df-4666-9b95-3dac4408aeb8";
-const EXAM_ID = "unit6-v1"; // غيّر الرقم لو عايز امتحان جديد يتفتح على نفس الجهاز
-const MINUTES = 90;
-const SUBJECT = "نتيجة امتحان الوحدة السادسة – الصف الأول الثانوي";
-/* ======================================== */
-
-const B = s => `<bdi class="b">${s}</bdi>`;
-const S = (n, b) => B(`${n}<sub>${b}</sub>`);
-// الإجابة الصحيحة دائمًا أول اختيار – يتم خلط الأسئلة والاختيارات لكل طالب
-const SEC = [1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 3, 2, 1, 2];
-const SECT = [null, ["bits & Bytes", "البت والبايت ووحدات القياس"],
-  ["Binary ⇄ Decimal", "التحويل بين النظام الثنائي والعشري"],
-  ["Hexadecimal", "النظام السادس عشر"]
-];
-const AR = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩"[d]);
-const Q = [{
-  q: `كم عدد القيم المختلفة التي يمكن تمثيلها باستخدام 5 بتات؟`,
-  o: ["32", "25", "10", "64"]
-}, {
-  q: `أقل عدد من البتات يكفي لتمثيل 100 حالة مختلفة هو:`,
-  o: ["7 بتات", "6 بتات", "8 بتات", "50 بت"]
-}, {
-  q: `ملف حجمه 3 KB. كم بت يحتوي؟`,
-  o: ["24,576", "3,072", "24,000", "8,192"]
-}, {
-  q: `2 GB تساوي كم كيلوبايت (KB)؟`,
-  o: ["2,097,152", "2,048", "1,048,576", "2,000,000"]
-}, {
-  q: `أكبر قيمة عشرية يمكن تخزينها في بايت واحد هي:`,
-  o: ["255", "256", "127", "128"]
-}, {
-  q: `ما القيمة العشرية للعدد ${S("101101",2)}؟`,
-  o: ["45", "43", "41", "53"]
-}, {
-  q: `حوّل العدد العشري ${S("77",10)} إلى النظام الثنائي:`,
-  o: [B("1001101"), B("1001011"), B("1101001"), B("1011001")]
-}, {
-  q: `عدد ثنائي فيه الواحد في خانات الوزن 128 و 8 و 1 فقط، وباقي الخانات أصفار. قيمته العشرية:`,
-  o: ["137", "129", "136", "145"]
-}, {
-  q: `حوّل العدد العشري ${S("200",10)} إلى النظام الثنائي:`,
-  o: [B("11001000"), B("11000100"), B("10011000"), B("11001001")]
-}, {
-  q: `ما المقابل السادس عشر للعدد ${S("11010111",2)}؟`,
-  o: [S("D7", 16), S("7D", 16), S("C7", 16), S("D6", 16)]
-}, {
-  q: `ما المقابل الثنائي للعدد ${S("3F",16)} (بدون أصفار زائدة في البداية)؟`,
-  o: [B("111111"), B("110011"), B("101111"), B("111110")]
-}, {
-  q: `ما القيمة العشرية للعدد ${S("B2",16)}؟`,
-  o: ["178", "162", "188", "172"]
-}, {
-  q: `كم بتًا يحتاج العدد السادس عشر ${S("FF3A",16)} عند كتابته كاملًا في النظام الثنائي (4 بتات لكل رمز)؟`,
-  o: ["16", "8", "12", "20"]
-}, {
-  q: `حوّل ${S("101011110001",2)} إلى النظام السادس عشر:`,
-  o: [S("AF1", 16), S("FA1", 16), S("A1F", 16), S("AE1", 16)]
-}, {
-  q: `أي الأعداد التالية <b>لا يمكن</b> أن يكون عددًا ثنائيًا؟`,
-  o: [B("10201"), B("10011"), B("1101"), B("100000")]
-}, {
-  q: `أي الأعداد التالية <b>لا يمكن</b> أن يكون عددًا في النظام السادس عشر؟`,
-  o: [B("1G5"), B("A1F"), B("9BC"), B("7E0")]
-}, {
-  q: `أي الأعداد التالية له أكبر قيمة؟`,
-  o: [S("1101", 2), S("12", 10), S("C", 16), S("1011", 2)]
-}, {
-  q: `كم بتًا يلزم لكتابة العدد العشري ${S("16",10)} في النظام الثنائي؟`,
-  o: ["5", "4", "6", "8"]
-}, {
-  q: `أكبر قيمة عشرية يمكن تمثيلها باستخدام 10 بتات هي:`,
-  o: ["1023", "1024", "1000", "512"]
-}, {
-  q: `عند تحويل ${S("13",10)} بالقسمة المتكررة على 2 كانت البواقي بالترتيب: 1 ثم 0 ثم 1 ثم 1. ما العدد الثنائي الناتج؟`,
-  o: [B("1101"), B("1011"), B("1110"), B("0111")]
-}, ];
+        const B = s => `<bdi class="b">${s}</bdi>`;
+        const S = (n, b) => B(`${n}<sub>${b}</sub>`);
+        // الإجابة الصحيحة دائمًا أول اختيار – يتم خلط الأسئلة والاختيارات لكل طالب
+        const SEC = [1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 2, 3, 3, 2, 1, 2];
+        const SECT = [null, ["bits & Bytes", "البت والبايت ووحدات القياس"],
+            ["Binary ⇄ Decimal", "التحويل بين النظام الثنائي والعشري"],
+            ["Hexadecimal", "النظام السادس عشر"]
+        ];
+        const AR = n => String(n).replace(/\d/g, d => "٠١٢٣٤٥٦٧٨٩" [d]);
+        const Q = [{
+            q: `كم عدد القيم المختلفة التي يمكن تمثيلها باستخدام 5 بتات؟`,
+            o: ["32", "25", "10", "64"]
+        }, {
+            q: `أقل عدد من البتات يكفي لتمثيل 100 حالة مختلفة هو:`,
+            o: ["7 بتات", "6 بتات", "8 بتات", "50 بت"]
+        }, {
+            q: `ملف حجمه 3 KB. كم بت يحتوي؟`,
+            o: ["24,576", "3,072", "24,000", "8,192"]
+        }, {
+            q: `2 GB تساوي كم كيلوبايت (KB)؟`,
+            o: ["2,097,152", "2,048", "1,048,576", "2,000,000"]
+        }, {
+            q: `أكبر قيمة عشرية يمكن تخزينها في بايت واحد هي:`,
+            o: ["255", "256", "127", "128"]
+        }, {
+            q: `ما القيمة العشرية للعدد ${S("101101",2)}؟`,
+            o: ["45", "43", "41", "53"]
+        }, {
+            q: `حوّل العدد العشري ${S("77",10)} إلى النظام الثنائي:`,
+            o: [B("1001101"), B("1001011"), B("1101001"), B("1011001")]
+        }, {
+            q: `عدد ثنائي فيه الواحد في خانات الوزن 128 و 8 و 1 فقط، وباقي الخانات أصفار. قيمته العشرية:`,
+            o: ["137", "129", "136", "145"]
+        }, {
+            q: `حوّل العدد العشري ${S("200",10)} إلى النظام الثنائي:`,
+            o: [B("11001000"), B("11000100"), B("10011000"), B("11001001")]
+        }, {
+            q: `ما المقابل السادس عشر للعدد ${S("11010111",2)}؟`,
+            o: [S("D7", 16), S("7D", 16), S("C7", 16), S("D6", 16)]
+        }, {
+            q: `ما المقابل الثنائي للعدد ${S("3F",16)} (بدون أصفار زائدة في البداية)؟`,
+            o: [B("111111"), B("110011"), B("101111"), B("111110")]
+        }, {
+            q: `ما القيمة العشرية للعدد ${S("B2",16)}؟`,
+            o: ["178", "162", "188", "172"]
+        }, {
+            q: `كم بتًا يحتاج العدد السادس عشر ${S("FF3A",16)} عند كتابته كاملًا في النظام الثنائي (4 بتات لكل رمز)؟`,
+            o: ["16", "8", "12", "20"]
+        }, {
+            q: `حوّل ${S("101011110001",2)} إلى النظام السادس عشر:`,
+            o: [S("AF1", 16), S("FA1", 16), S("A1F", 16), S("AE1", 16)]
+        }, {
+            q: `أي الأعداد التالية <b>لا يمكن</b> أن يكون عددًا ثنائيًا؟`,
+            o: [B("10201"), B("10011"), B("1101"), B("100000")]
+        }, {
+            q: `أي الأعداد التالية <b>لا يمكن</b> أن يكون عددًا في النظام السادس عشر؟`,
+            o: [B("1G5"), B("A1F"), B("9BC"), B("7E0")]
+        }, {
+            q: `أي الأعداد التالية له أكبر قيمة؟`,
+            o: [S("1101", 2), S("12", 10), S("C", 16), S("1011", 2)]
+        }, {
+            q: `كم بتًا يلزم لكتابة العدد العشري ${S("16",10)} في النظام الثنائي؟`,
+            o: ["5", "4", "6", "8"]
+        }, {
+            q: `أكبر قيمة عشرية يمكن تمثيلها باستخدام 10 بتات هي:`,
+            o: ["1023", "1024", "1000", "512"]
+        }, {
+            q: `عند تحويل ${S("13",10)} بالقسمة المتكررة على 2 كانت البواقي بالترتيب: 1 ثم 0 ثم 1 ثم 1. ما العدد الثنائي الناتج؟`,
+            o: [B("1101"), B("1011"), B("1110"), B("0111")]
+        }, ];
 
 
-/* ===== ٤٠ سؤال إضافية ===== */
-[
-  // القسم 1: بت وبايت
-  [`كم بتًا توجد في 4 بايت؟`, "32", "16", "24", "4"],
-  [`4096 بايت تساوي كم كيلوبايت (KB)؟`, "4 KB", "8 KB", "40 KB", "0.4 KB"],
-  [`5 MB تساوي كم كيلوبايت (KB)؟`, "5,120", "5,000", "512", "50"],
-  [`عند إضافة بت واحد فقط إلى عدد من البتات، فإن عدد الاحتمالات الممكنة:`, "يتضاعف", "يزيد بمقدار 1", "يزيد بمقدار 2", "يتربّع"],
-  [`أقل عدد من البتات يكفي لتمثيل 26 حرفًا إنجليزيًا مختلفًا هو:`, "5", "4", "6", "26"],
-  [`1 TB تساوي كم ميجابايت (MB)؟`, "1,048,576", "1,024", "1,000,000", "1,048"],
-  [`كم قيمة مختلفة يمكن تمثيلها باستخدام 16 بت؟`, "65,536", "32,768", "16,384", "65,535"],
-  [`أي ترتيب لوحدات القياس صحيح من الأصغر إلى الأكبر؟`, "B < KB < MB < GB", "KB < B < MB < GB", "B < MB < KB < GB", "B < KB < GB < MB"],
-  [`ملف حجمه 2048 KB. حجمه بوحدة MB يساوي:`, "2 MB", "20 MB", "4 MB", "0.2 MB"],
-  [`كم احتمالًا مختلفًا يمكن تمثيله باستخدام 6 بتات؟`, "64", "36", "12", "32"],
-  [`كم بايتًا توجد في 64 بت؟`, "8", "64", "6", "16"],
-  [`أكبر قيمة عشرية يمكن تمثيلها باستخدام 3 بتات هي:`, "7", "8", "6", "3"],
-  [`أي مما يلي يصلح تمثيله ببت واحد فقط؟`, "حالة المصباح (مضاء / مطفأ)", "درجة حرارة الغرفة", "أيام الأسبوع", "ألوان قوس قزح"],
-  [`أقل عدد من البتات يكفي لتمثيل 1000 حالة مختلفة هو:`, "10", "9", "8", "100"],
-  // القسم 2: ثنائي ⇄ عشري
-  [`ما القيمة العشرية للعدد ${S("11001",2)}؟`, "25", "23", "27", "19"],
-  [`ما القيمة العشرية للعدد ${S("100000",2)}؟`, "32", "16", "64", "20"],
-  [`ما القيمة العشرية للعدد ${S("1111111",2)} (سبعة آحاد)؟`, "127", "128", "63", "255"],
-  [`ما القيمة العشرية للعدد ${S("10101010",2)}؟`, "170", "85", "171", "168"],
-  [`حوّل ${S("50",10)} إلى النظام الثنائي:`, B("110010"), B("101010"), B("110001"), B("100110")],
-  [`حوّل ${S("100",10)} إلى النظام الثنائي:`, B("1100100"), B("1100010"), B("1001100"), B("1110100")],
-  [`حوّل ${S("255",10)} إلى النظام الثنائي:`, B("11111111"), B("11111110"), B("1111111"), B("111111111")],
-  [`حوّل ${S("18",10)} إلى النظام الثنائي:`, B("10010"), B("10100"), B("11010"), B("10110")],
-  [`ما القيمة العشرية للعدد ${S("11100",2)}؟`, "28", "14", "30", "26"],
-  [`العدد ${S("25",10)} = ${S("11001",2)}. كم عملية قسمة على 2 نحتاجها للوصول إلى ناتج صفر؟`, "5", "4", "6", "25"],
-  [`العدد 2<sup>6</sup> + 2<sup>2</sup> + 2<sup>1</sup> يُكتب في النظام الثنائي:`, B("1000110"), B("1000101"), B("1100010"), B("1001100")],
-  [`أي عدد ثنائي يساوي ${S("9",10)}؟`, B("1001"), B("1010"), B("0110"), B("1100")],
-  [`ما العدد العشري الذي يلي ${S("1111",2)} مباشرة في العدّ؟`, "16", "15", "17", "14"],
-  // القسم 3: سادس عشر
-  [`حوّل ${S("10101010",2)} إلى النظام السادس عشر:`, S("AA", 16), S("A5", 16), S("5A", 16), S("BA", 16)],
-  [`ما المقابل الثنائي للعدد ${S("9C",16)}؟`, B("10011100"), B("11001001"), B("10010011"), B("10011010")],
-  [`ما القيمة العشرية للعدد ${S("E4",16)}؟`, "228", "224", "232", "148"],
-  [`ما القيمة العشرية للعدد ${S("7F",16)}؟`, "127", "255", "112", "128"],
-  [`ما القيمة العشرية للعدد ${S("FF",16)}؟`, "255", "256", "225", "240"],
-  [`الرمز D في النظام السادس عشر يساوي في النظام العشري:`, "13", "14", "12", "15"],
-  [`حوّل ${S("01100001",2)} إلى النظام السادس عشر:`, S("61", 16), S("16", 16), S("B1", 16), S("60", 16)],
-  [`حوّل ${S("11110000",2)} إلى النظام السادس عشر:`, S("F0", 16), S("0F", 16), S("E0", 16), S("F8", 16)],
-  [`ما القيمة العشرية للعدد ${S("A0",16)}؟`, "160", "100", "10", "16"],
-  [`عدد الرموز المستخدمة في النظام السادس عشر هو:`, "16", "15", "10", "8"],
-  [`ما المقابل الثنائي للعدد ${S("2B",16)} (بدون أصفار زائدة في البداية)؟`, B("101011"), B("101101"), B("110101"), B("111011")],
-  [`أي الأعداد التالية له أكبر قيمة؟`, S("1F", 16), S("11110", 2), S("29", 10), S("11101", 2)],
-  [`ما القيمة العشرية للعدد ${S("AB",16)}؟`, "171", "161", "181", "170"],
-].forEach(a => Q.push({
-  q: a[0],
-  o: a.slice(1)
-}));
-SEC.push(...Array(14).fill(1), ...Array(13).fill(2), ...Array(13).fill(3));
+        /* ===== ٤٠ سؤال إضافية ===== */
+        [
+            // القسم 1: بت وبايت
+            [`كم بتًا توجد في 4 بايت؟`, "32", "16", "24", "4"],
+            [`4096 بايت تساوي كم كيلوبايت (KB)؟`, "4 KB", "8 KB", "40 KB", "0.4 KB"],
+            [`5 MB تساوي كم كيلوبايت (KB)؟`, "5,120", "5,000", "512", "50"],
+            [`عند إضافة بت واحد فقط إلى عدد من البتات، فإن عدد الاحتمالات الممكنة:`, "يتضاعف", "يزيد بمقدار 1", "يزيد بمقدار 2", "يتربّع"],
+            [`أقل عدد من البتات يكفي لتمثيل 26 حرفًا إنجليزيًا مختلفًا هو:`, "5", "4", "6", "26"],
+            [`1 TB تساوي كم ميجابايت (MB)؟`, "1,048,576", "1,024", "1,000,000", "1,048"],
+            [`كم قيمة مختلفة يمكن تمثيلها باستخدام 16 بت؟`, "65,536", "32,768", "16,384", "65,535"],
+            [`أي ترتيب لوحدات القياس صحيح من الأصغر إلى الأكبر؟`, "B < KB < MB < GB", "KB < B < MB < GB", "B < MB < KB < GB", "B < KB < GB < MB"],
+            [`ملف حجمه 2048 KB. حجمه بوحدة MB يساوي:`, "2 MB", "20 MB", "4 MB", "0.2 MB"],
+            [`كم احتمالًا مختلفًا يمكن تمثيله باستخدام 6 بتات؟`, "64", "36", "12", "32"],
+            [`كم بايتًا توجد في 64 بت؟`, "8", "64", "6", "16"],
+            [`أكبر قيمة عشرية يمكن تمثيلها باستخدام 3 بتات هي:`, "7", "8", "6", "3"],
+            [`أي مما يلي يصلح تمثيله ببت واحد فقط؟`, "حالة المصباح (مضاء / مطفأ)", "درجة حرارة الغرفة", "أيام الأسبوع", "ألوان قوس قزح"],
+            [`أقل عدد من البتات يكفي لتمثيل 1000 حالة مختلفة هو:`, "10", "9", "8", "100"],
+            // القسم 2: ثنائي ⇄ عشري
+            [`ما القيمة العشرية للعدد ${S("11001",2)}؟`, "25", "23", "27", "19"],
+            [`ما القيمة العشرية للعدد ${S("100000",2)}؟`, "32", "16", "64", "20"],
+            [`ما القيمة العشرية للعدد ${S("1111111",2)} (سبعة آحاد)؟`, "127", "128", "63", "255"],
+            [`ما القيمة العشرية للعدد ${S("10101010",2)}؟`, "170", "85", "171", "168"],
+            [`حوّل ${S("50",10)} إلى النظام الثنائي:`, B("110010"), B("101010"), B("110001"), B("100110")],
+            [`حوّل ${S("100",10)} إلى النظام الثنائي:`, B("1100100"), B("1100010"), B("1001100"), B("1110100")],
+            [`حوّل ${S("255",10)} إلى النظام الثنائي:`, B("11111111"), B("11111110"), B("1111111"), B("111111111")],
+            [`حوّل ${S("18",10)} إلى النظام الثنائي:`, B("10010"), B("10100"), B("11010"), B("10110")],
+            [`ما القيمة العشرية للعدد ${S("11100",2)}؟`, "28", "14", "30", "26"],
+            [`العدد ${S("25",10)} = ${S("11001",2)}. كم عملية قسمة على 2 نحتاجها للوصول إلى ناتج صفر؟`, "5", "4", "6", "25"],
+            [`العدد 2<sup>6</sup> + 2<sup>2</sup> + 2<sup>1</sup> يُكتب في النظام الثنائي:`, B("1000110"), B("1000101"), B("1100010"), B("1001100")],
+            [`أي عدد ثنائي يساوي ${S("9",10)}؟`, B("1001"), B("1010"), B("0110"), B("1100")],
+            [`ما العدد العشري الذي يلي ${S("1111",2)} مباشرة في العدّ؟`, "16", "15", "17", "14"],
+            // القسم 3: سادس عشر
+            [`حوّل ${S("10101010",2)} إلى النظام السادس عشر:`, S("AA", 16), S("A5", 16), S("5A", 16), S("BA", 16)],
+            [`ما المقابل الثنائي للعدد ${S("9C",16)}؟`, B("10011100"), B("11001001"), B("10010011"), B("10011010")],
+            [`ما القيمة العشرية للعدد ${S("E4",16)}؟`, "228", "224", "232", "148"],
+            [`ما القيمة العشرية للعدد ${S("7F",16)}؟`, "127", "255", "112", "128"],
+            [`ما القيمة العشرية للعدد ${S("FF",16)}؟`, "255", "256", "225", "240"],
+            [`الرمز D في النظام السادس عشر يساوي في النظام العشري:`, "13", "14", "12", "15"],
+            [`حوّل ${S("01100001",2)} إلى النظام السادس عشر:`, S("61", 16), S("16", 16), S("B1", 16), S("60", 16)],
+            [`حوّل ${S("11110000",2)} إلى النظام السادس عشر:`, S("F0", 16), S("0F", 16), S("E0", 16), S("F8", 16)],
+            [`ما القيمة العشرية للعدد ${S("A0",16)}؟`, "160", "100", "10", "16"],
+            [`عدد الرموز المستخدمة في النظام السادس عشر هو:`, "16", "15", "10", "8"],
+            [`ما المقابل الثنائي للعدد ${S("2B",16)} (بدون أصفار زائدة في البداية)؟`, B("101011"), B("101101"), B("110101"), B("111011")],
+            [`أي الأعداد التالية له أكبر قيمة؟`, S("1F", 16), S("11110", 2), S("29", 10), S("11101", 2)],
+            [`ما القيمة العشرية للعدد ${S("AB",16)}؟`, "171", "161", "181", "170"],
+        ].forEach(a => Q.push({
+            q: a[0],
+            o: a.slice(1)
+        }));
+        SEC.push(...Array(14).fill(1), ...Array(13).fill(2), ...Array(13).fill(3));
 
-const $ = id => document.getElementById(id);
-const KEY = "exam_state_" + EXAM_ID;
-const load = () => {
-  try {
-    return JSON.parse(localStorage.getItem(KEY));
-  } catch (e) {
-    return null;
-  }
-};
-const save = s => {
-  try {
-    localStorage.setItem(KEY, JSON.stringify(s));
-  } catch (e) {}
-  document.cookie = KEY + "=" + s.status + ";max-age=31536000;path=/;SameSite=Lax";
-};
-const cookieStatus = () => (document.cookie.split("; ").find(c => c.startsWith(KEY + "=")) || "").split("=")[1];
-const shuffle = a => {
-  a = a.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-};
-const plain = h => {
-  const d = document.createElement("div");
-  d.innerHTML = h;
-  return d.textContent.replace(/\s+/g, " ").trim();
-};
-// كل تبديل بين الشاشات يرجّع الصفحة لأولها (مهم في الهاتف)
-const show = id => ["s-start", "s-exam", "s-done", "s-lock"].forEach(x => $(x).classList.toggle("hide", x !== id)) || window.scrollTo(0, 0);
-const toast = m => {
-  const t = document.createElement("div");
-  t.className = "toast";
-  t.textContent = m;
-  document.body.appendChild(t);
-  setTimeout(() => t.remove(), 4000);
-};
+        const $ = id => document.getElementById(id);
+        const KEY = "exam_state_" + EXAM_ID;
+        const load = () => {
+            try {
+                return JSON.parse(localStorage.getItem(KEY));
+            } catch (e) {
+                return null;
+            }
+        };
+        const save = s => {
+            try {
+                localStorage.setItem(KEY, JSON.stringify(s));
+            } catch (e) {}
+            document.cookie = KEY + "=" + s.status + ";max-age=31536000;path=/;SameSite=Lax";
+        };
+        const cookieStatus = () => (document.cookie.split("; ").find(c => c.startsWith(KEY + "=")) || "").split("=")[1];
+        const shuffle = a => {
+            a = a.slice();
+            for (let i = a.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [a[i], a[j]] = [a[j], a[i]];
+            }
+            return a;
+        };
+        const plain = h => {
+            const d = document.createElement("div");
+            d.innerHTML = h;
+            return d.textContent.replace(/\s+/g, " ").trim();
+        };
+        // كل تبديل بين الشاشات يرجّع الصفحة لأولها (مهم في الهاتف)
+        const show = id => ["s-start", "s-exam", "s-done", "s-lock"].forEach(x => $(x).classList.toggle("hide", x !== id)) || window.scrollTo(0, 0);
+        const toast = m => {
+            const t = document.createElement("div");
+            t.className = "toast";
+            t.textContent = m;
+            document.body.appendChild(t);
+            setTimeout(() => t.remove(), 4000);
+        };
 
-let st = load(),
-  tick = null;
-$("mins").textContent = AR(MINUTES);
-$("nq").textContent = AR(Q.length);
+        let st = load(),
+            tick = null;
+        $("mins").textContent = AR(MINUTES);
+        $("nq").textContent = AR(Q.length);
 
-function init() {
-  if (st && st.status === "submitted") return showResult(true);
-  if (!st && cookieStatus()) return show("s-lock"); // مسح التخزين لا يكفي لإعادة الدخول
-  if (st && st.status === "started") return runExam();
-  show("s-start");
-}
+        function init() {
+            if (st && st.status === "submitted") return showResult(true);
+            if (!st && cookieStatus()) return show("s-lock"); // مسح التخزين لا يكفي لإعادة الدخول
+            if (st && st.status === "started") return runExam();
+            show("s-start");
+        }
 
-$("go").onclick = () => {
-  const name = $("name").value.trim(),
-    grp = $("grp").value.trim(),
-    // يقبل الأرقام العربية (٠١٢) من كيبورد الهاتف ويشيل المسافات والشرطات
-    ph = $("ph").value.trim().replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[\s\-+]/g, "");
-  if (name.split(/\s+/).length < 3) return $("e-start").textContent = "اكتب اسمك الثلاثي على الأقل.";
-  if (!grp) return $("e-start").textContent = "اكتب الفصل أو رقم الجلوس.";
-  if (!/^\d{10,15}$/.test(ph)) return $("e-start").textContent = "اكتب رقم هاتف صحيح من أرقام فقط.";
-  if (!confirm("بعد البدء لن تستطيع إعادة الامتحان. هل أنت مستعد؟")) return;
-  st = {
-    status: "started",
-    name,
-    grp,
-    ph,
-    end: Date.now() + MINUTES * 60000,
-    startedAt: Date.now(),
-    switches: 0,
-    ans: {},
-    order: [1, 2, 3].flatMap(k => shuffle(Q.map((_, i) => i).filter(i => SEC[i] === k))).map(i => ({
-      i,
-      o: shuffle([0, 1, 2, 3])
-    }))
-  };
-  save(st);
-  runExam();
-};
+        $("go").onclick = () => {
+            const name = $("name").value.trim(),
+                grp = $("grp").value.trim(),
+                // يقبل الأرقام العربية (٠١٢) من كيبورد الهاتف ويشيل المسافات والشرطات
+                ph = $("ph").value.trim().replace(/[٠-٩]/g, d => "٠١٢٣٤٥٦٧٨٩".indexOf(d)).replace(/[\s\-+]/g, "");
+            if (name.split(/\s+/).length < 3) return $("e-start").textContent = "اكتب اسمك الثلاثي على الأقل.";
+            if (!grp) return $("e-start").textContent = "اكتب الفصل أو رقم الجلوس.";
+            if (!/^\d{10,15}$/.test(ph)) return $("e-start").textContent = "اكتب رقم هاتف صحيح من أرقام فقط.";
+            if (!confirm("بعد البدء لن تستطيع إعادة الامتحان. هل أنت مستعد؟")) return;
+            st = {
+                status: "started",
+                name,
+                grp,
+                ph,
+                end: Date.now() + MINUTES * 60000,
+                startedAt: Date.now(),
+                switches: 0,
+                ans: {},
+                order: [1, 2, 3].flatMap(k => shuffle(Q.map((_, i) => i).filter(i => SEC[i] === k))).map(i => ({
+                    i,
+                    o: shuffle([0, 1, 2, 3])
+                }))
+            };
+            save(st);
+            runExam();
+        };
 
-function runExam() {
-  show("s-exam");
-  const box = $("qs");
-  box.innerHTML = "";
-  $("bits").innerHTML = "";
-  let last = 0;
-  st.order.forEach((it, n) => {
-    const q = Q[it.i],
-      k = SEC[it.i];
-    if (k !== last) {
-      last = k;
-      const h = document.createElement("div");
-      h.className = "bar-sec";
-      h.innerHTML = `<b>${SECT[k][0]}</b><em>${SECT[k][1]}</em><span class="dot">${AR(k)}</span>`;
-      box.appendChild(h);
-    }
-    const d = document.createElement("div");
-    d.className = "q";
-    d.id = "q" + n;
-    d.innerHTML = `<span class="pill">سؤال ${AR(n+1)} ✎</span><h3>${q.q}</h3>` + it.o.map(oi =>
-      `<label class="opt"><input type="radio" name="r${n}" value="${oi}" ${st.ans[n]==oi?"checked":""}><span>${q.o[oi]}</span></label>`).join("");
-    d.addEventListener("change", e => {
-      st.ans[n] = +e.target.value;
-      save(st);
-      paint();
-    });
-    box.appendChild(d);
-    const c = document.createElement("i");
-    c.textContent = n + 1;
-    c.onclick = () => closeMap() || d.scrollIntoView({
-      behavior: "smooth"
-    });
-    $("bits").appendChild(c);
-  });
-  paint();
-  clearInterval(tick);
-  tick = setInterval(clock, 500);
-  clock();
-}
+        function runExam() {
+            show("s-exam");
+            const box = $("qs");
+            box.innerHTML = "";
+            $("bits").innerHTML = "";
+            let last = 0;
+            st.order.forEach((it, n) => {
+                const q = Q[it.i],
+                    k = SEC[it.i];
+                if (k !== last) {
+                    last = k;
+                    const h = document.createElement("div");
+                    h.className = "bar-sec";
+                    h.innerHTML = `<b>${SECT[k][0]}</b><em>${SECT[k][1]}</em><span class="dot">${AR(k)}</span>`;
+                    box.appendChild(h);
+                }
+                const d = document.createElement("div");
+                d.className = "q";
+                d.id = "q" + n;
+                d.innerHTML = `<span class="pill">سؤال ${AR(n+1)} ✎</span><h3>${q.q}</h3>` + it.o.map(oi =>
+                    `<label class="opt"><input type="radio" name="r${n}" value="${oi}" ${st.ans[n]==oi?"checked":""}><span>${q.o[oi]}</span></label>`).join("");
+                d.addEventListener("change", e => {
+                    st.ans[n] = +e.target.value;
+                    save(st);
+                    paint();
+                });
+                box.appendChild(d);
+                const c = document.createElement("i");
+                c.textContent = n + 1;
+                c.onclick = () => closeMap() || d.scrollIntoView({
+                    behavior: "smooth"
+                });
+                $("bits").appendChild(c);
+            });
+            paint();
+            clearInterval(tick);
+            tick = setInterval(clock, 500);
+            clock();
+        }
 
-function paint() {
-  const n = Object.keys(st.ans).length;
-  [...$("bits").children].forEach((c, i) => c.classList.toggle("on", st.ans[i] !== undefined));
-  $("cnt").textContent = `تمت الإجابة على ${AR(n)} من ${AR(Q.length)}`;
-  $("pf").style.width = (n / Q.length * 100) + "%";
-}
+        function paint() {
+            const n = Object.keys(st.ans).length;
+            [...$("bits").children].forEach((c, i) => c.classList.toggle("on", st.ans[i] !== undefined));
+            $("cnt").textContent = `تمت الإجابة على ${AR(n)} من ${AR(Q.length)}`;
+            $("pf").style.width = (n / Q.length * 100) + "%";
+        }
 
-// خريطة الأسئلة في الهاتف: مخفية وتفتح بزر "الأسئلة"
-function closeMap() {
-  $("bar").classList.remove("open");
-  $("mapbtn").setAttribute("aria-expanded", "false");
-}
-$("mapbtn").onclick = () => {
-  const o = $("bar").classList.toggle("open");
-  $("mapbtn").setAttribute("aria-expanded", o);
-};
+        // خريطة الأسئلة في الهاتف: مخفية وتفتح بزر "الأسئلة"
+        function closeMap() {
+            $("bar").classList.remove("open");
+            $("mapbtn").setAttribute("aria-expanded", "false");
+        }
+        $("mapbtn").onclick = () => {
+            const o = $("bar").classList.toggle("open");
+            $("mapbtn").setAttribute("aria-expanded", o);
+        };
 
-function clock() {
-  const left = Math.max(0, st.end - Date.now()),
-    m = Math.floor(left / 60000),
-    s = Math.floor(left % 60000 / 1000);
-  $("tm").textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
-  $("tm").classList.toggle("low", left < 5 * 60000);
-  if (left <= 0) finish(true);
-}
-$("fin").onclick = () => {
-  const miss = Q.length - Object.keys(st.ans).length;
-  if (miss && !confirm(`باقي ${miss} سؤال بدون إجابة. تسليم الآن؟`)) return;
-  finish(false);
-};
+        function clock() {
+            const left = Math.max(0, st.end - Date.now()),
+                m = Math.floor(left / 60000),
+                s = Math.floor(left % 60000 / 1000);
+            $("tm").textContent = String(m).padStart(2, "0") + ":" + String(s).padStart(2, "0");
+            $("tm").classList.toggle("low", left < 5 * 60000);
+            if (left <= 0) finish(true);
+        }
+        $("fin").onclick = () => {
+            const miss = Q.length - Object.keys(st.ans).length;
+            if (miss && !confirm(`باقي ${miss} سؤال بدون إجابة. تسليم الآن؟`)) return;
+            finish(false);
+        };
 
-function finish(auto) {
-  if (st.status === "submitted") return;
-  clearInterval(tick);
-  let score = 0;
-  const lines = [];
-  st.order.forEach((it, n) => {
-    const q = Q[it.i],
-      a = st.ans[n],
-      ok = a === 0;
-    if (ok) score++;
-    lines.push(`${n+1}) ${plain(q.q)}\n   اختيار الطالب: ${a===undefined?"— بدون إجابة —":plain(q.o[a])} | ${ok?"صح":"خطأ"} | الصحيح: ${plain(q.o[0])}`);
-  });
-  st.status = "submitted";
-  st.score = score;
-  st.auto = auto;
-  st.finishedAt = Date.now();
-  st.payload = {
-    access_key: ACCESS_KEY,
-    subject: SUBJECT,
-    from_name: "Exam System",
-    botcheck: $("botcheck").value,
-    "الاسم": st.name,
-    "الفصل/رقم الجلوس": st.grp,
-    "الهاتف": st.ph,
-    "الدرجة": `${score} / ${Q.length}`,
-    "النسبة": Math.round(score / Q.length * 100) + "%",
-    "الزمن المستغرق (دقيقة)": ((st.finishedAt - st.startedAt) / 60000).toFixed(1),
-    "مرات الخروج من الصفحة": st.switches,
-    "تسليم تلقائي بانتهاء الوقت": auto ? "نعم" : "لا",
-    "الجهاز": navigator.userAgent,
-    "الإجابات": "\n" + lines.join("\n")
-  };
-  st.sent = false;
-  save(st);
-  showResult(false);
-}
+        function finish(auto) {
+            if (st.status === "submitted") return;
+            clearInterval(tick);
+            let score = 0;
+            const lines = [];
+            st.order.forEach((it, n) => {
+                const q = Q[it.i],
+                    a = st.ans[n],
+                    ok = a === 0;
+                if (ok) score++;
+                lines.push(`${n+1}) ${plain(q.q)}\n   اختيار الطالب: ${a===undefined?"— بدون إجابة —":plain(q.o[a])} | ${ok?"صح":"خطأ"} | الصحيح: ${plain(q.o[0])}`);
+            });
+            st.status = "submitted";
+            st.score = score;
+            st.auto = auto;
+            st.finishedAt = Date.now();
+            st.payload = {
+                access_key: ACCESS_KEY,
+                subject: SUBJECT,
+                from_name: "Exam System",
+                botcheck: $("botcheck").value,
+                "الاسم": st.name,
+                "الفصل/رقم الجلوس": st.grp,
+                "الهاتف": st.ph,
+                "الدرجة": `${score} / ${Q.length}`,
+                "النسبة": Math.round(score / Q.length * 100) + "%",
+                "الزمن المستغرق (دقيقة)": ((st.finishedAt - st.startedAt) / 60000).toFixed(1),
+                "مرات الخروج من الصفحة": st.switches,
+                "تسليم تلقائي بانتهاء الوقت": auto ? "نعم" : "لا",
+                "الجهاز": navigator.userAgent,
+                "الإجابات": "\n" + lines.join("\n")
+            };
+            st.sent = false;
+            save(st);
+            showResult(false);
+        }
 
-async function send() {
-  $("e-done").textContent = "";
-  $("retry").classList.add("hide");
-  try {
-    const r = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json"
-      },
-      body: JSON.stringify(st.payload)
-    });
-    const j = await r.json();
-    if (!j.success) throw new Error(j.message || "failed");
-    st.sent = true;
-    delete st.payload;
-    save(st);
-    $("d-msg").textContent = "تم تسليم إجاباتك وإرسالها للمعلم بنجاح.";
-  } catch (e) {
-    $("e-done").textContent = "تعذّر إرسال الإجابات. تأكد من الإنترنت ثم اضغط إعادة المحاولة. لا تغلق هذه الصفحة.";
-    $("retry").classList.remove("hide");
-  }
-}
+        async function send() {
+            $("e-done").textContent = "";
+            $("retry").classList.add("hide");
+            try {
+                const r = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json"
+                    },
+                    body: JSON.stringify(st.payload)
+                });
+                const j = await r.json();
+                if (!j.success) throw new Error(j.message || "failed");
+                st.sent = true;
+                delete st.payload;
+                save(st);
+                $("d-msg").textContent = "تم تسليم إجاباتك وإرسالها للمعلم بنجاح.";
+            } catch (e) {
+                $("e-done").textContent = "تعذّر إرسال الإجابات. تأكد من الإنترنت ثم اضغط إعادة المحاولة. لا تغلق هذه الصفحة.";
+                $("retry").classList.remove("hide");
+            }
+        }
 
-function showResult(fromLock) {
-  show("s-done");
-  $("d-big").textContent = `${AR(st.score)} / ${AR(Q.length)}`;
-  $("d-msg").textContent = "جاري إرسال إجاباتك…";
-  if (st.sent) $("d-msg").textContent = "تم تسليم هذا الامتحان وإرسال إجاباتك للمعلم.";
-  else send();
-}
-$("retry").onclick = send;
+        function showResult(fromLock) {
+            show("s-done");
+            $("d-big").textContent = `${AR(st.score)} / ${AR(Q.length)}`;
+            $("d-msg").textContent = "جاري إرسال إجاباتك…";
+            if (st.sent) $("d-msg").textContent = "تم تسليم هذا الامتحان وإرسال إجاباتك للمعلم.";
+            else send();
+        }
+        $("retry").onclick = send;
 
-document.addEventListener("visibilitychange", () => {
-  if (document.hidden && st && st.status === "started") {
-    st.switches++;
-    save(st);
-    toast("تم تسجيل خروجك من صفحة الامتحان وإبلاغ المعلم.");
-  }
-});
-["contextmenu", "copy", "cut", "paste", "dragstart"].forEach(ev => document.addEventListener(ev, e => {
-  if (!/INPUT/.test(e.target.tagName) || ev !== "paste") e.preventDefault();
-}));
-window.addEventListener("beforeunload", e => {
-  if (st && st.status === "started") {
-    e.preventDefault();
-    e.returnValue = "";
-  }
-});
+        document.addEventListener("visibilitychange", () => {
+            if (document.hidden && st && st.status === "started") {
+                st.switches++;
+                save(st);
+                toast("تم تسجيل خروجك من صفحة الامتحان وإبلاغ المعلم.");
+            }
+        });
+        ["contextmenu", "copy", "cut", "paste", "dragstart"].forEach(ev => document.addEventListener(ev, e => {
+            if (!/INPUT/.test(e.target.tagName) || ev !== "paste") e.preventDefault();
+        }));
+        window.addEventListener("beforeunload", e => {
+            if (st && st.status === "started") {
+                e.preventDefault();
+                e.returnValue = "";
+            }
+        });
 
-init();
-</script>
+        init();
+    </script>
 </body>
 
 </html>
